@@ -22,4 +22,8 @@ public class PersonController {
     public List<Person> getPersonsByCity(@RequestParam String city) {
         return personService.getPersonsByCity(city);
     }
+    @GetMapping("/public/info")
+    public String getPublicInfo() {
+        return "This is a public information endpoint!";
+    }
 }
